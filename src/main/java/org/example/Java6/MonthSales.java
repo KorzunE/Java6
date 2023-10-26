@@ -1,5 +1,5 @@
 package org.example.Java6;
-public class monthSales {
+public class MonthSales {
 
     public int minSales(int[] sales) {
         int minMonth = 0;
@@ -48,7 +48,7 @@ public class monthSales {
         int count = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > 15) {
+            if (sales[i] > monthSalesMiddle(sales)) {
                 count = count + 1;
             } else continue;
         }
@@ -59,7 +59,7 @@ public class monthSales {
         int count = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < 15) {
+            if (sales[i] < monthSalesMiddle(sales)) {
                 count = count + 1;
             } else continue;
         }

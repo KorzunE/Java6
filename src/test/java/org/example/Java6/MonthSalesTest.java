@@ -2,11 +2,13 @@ package org.example.Java6;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class monthSalesTest {
+import java.util.jar.Manifest;
+
+public class MonthSalesTest {
     @Test
 
     public void minSalesMonth () {
-        monthSales service = new monthSales();
+        MonthSales service = new MonthSales();
 
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -18,7 +20,7 @@ public class monthSalesTest {
     @Test
 
     public void summarySalesAllMonth () {
-        monthSales service = new monthSales();
+        MonthSales service = new MonthSales();
 
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -31,7 +33,7 @@ public class monthSalesTest {
     @Test
 
     public void salesMonthMiddle () {
-        monthSales service = new monthSales();
+        MonthSales service = new MonthSales();
 
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -43,7 +45,7 @@ public class monthSalesTest {
     @Test
 
     public void maxSaleMonth () {
-        monthSales service = new monthSales();
+        MonthSales service = new MonthSales();
 
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -55,7 +57,7 @@ public class monthSalesTest {
     @Test
 
     public void monthSaleHigherMiddle () {
-        monthSales service = new monthSales();
+        MonthSales service = new MonthSales();
 
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -67,7 +69,7 @@ public class monthSalesTest {
     @Test
 
     public void monthSaleUnderMiddle () {
-        monthSales service = new monthSales();
+        MonthSales service = new MonthSales();
 
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
