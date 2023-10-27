@@ -46,10 +46,17 @@ public class MonthSales {
 
     public int monthHigherMiddle(int[] sales) {
         int count = 0;
+        int sum = 0;
+        int middle = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > monthSalesMiddle(sales)) {
-                count = count + 1;
+            sum = sum + sales[i];
+            middle = sum / 12;
+        }
+
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > middle) {
+                count++;
             } else continue;
         }
         return count;
@@ -57,10 +64,11 @@ public class MonthSales {
 
     public int monthUnderMiddle(int[] sales) {
         int count = 0;
+        int m = monthSalesMiddle(sales);
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < monthSalesMiddle(sales)) {
-                count = count + 1;
+            if (sales[i] < m) {
+                count++;
             } else continue;
         }
         return count;
